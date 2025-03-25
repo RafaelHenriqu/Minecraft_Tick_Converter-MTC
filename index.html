@@ -4,36 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Minecraft Tick Converter</title>
 </head>
 <body>
-   
-    
-<link rel="stylesheet" href="style.css">
- 
-<div id="Fundo">
- 
 
-    <p>Adicione Os Valores A ser Calculado</p>
-      
-    <input type="text" name="Segundos" id="Segundos" placeholder="S" class="Inputs">
+    <main>
+        <br>
+        <h1>Minecraft Tick Converter</h1>
+        <p>Time to ticks converter</p>
+        <form id="box">
+            <input type="number" name="" id="seconds" class="Numbers" placeholder="S" required>
+            <input type="number" name="" id="minutes" class="Numbers" placeholder="M" required>
+            <input type="number" name="" id="hours" class="Numbers" placeholder="H" required>
+            <input type="number" name="" id="days" class="Numbers" placeholder="D" required>
+            <input type="number" name="" id="years" class="Numbers" placeholder="Y" required>
+            <br>
+            <div id="Result_Box">
+                <h2 id="Result"></h2>
+                <button id="Start">Start</button>
+            </div>
+        </form>
+        
+        
+        
+        </main>
     
-    <input type="text" name="Minutos" id="Minutos" placeholder="M" class="Inputs">
+    
 
-    <input type="text" name="Horas" id="Horas" placeholder="H" class="Inputs">
-
-    <input type="text" name="Dias" id="Dias" placeholder="D" class="Inputs">
+<script>
+document.getElementById("Start").addEventListener('click',(e)=>{
+    e.preventDefault()
+    var Result_Number = document.getElementById('seconds').value * (20) + document.getElementById('minutes').value * (60 * 20) + document.getElementById('hours').value * (60 * 60 * 20) + document.getElementById('days').value * (60 * 60 * 24 * 20) + document.getElementById('years').value * (60 * 60 * 24 * 365 * 20);
+    document.getElementById("Result").innerHTML = `Result: ${Result_Number}`
     
-     <br>
- 
     
     
-    <p id="Result">Result: </p>
-    
-
-<button id="Bt">On</button>
-
-</div>
-<script src="script.js"></script>
+    })
+</script>
 </body>
 </html>
