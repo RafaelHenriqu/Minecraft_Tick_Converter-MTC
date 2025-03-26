@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="Server.js"></script>
     <title>Minecraft Tick Converter</title>
 </head>
-<body>
+<body onload="Load()">
 
     <main>
         <br>
@@ -26,10 +27,29 @@
                 <button id="Start">Start</button>
             </div>
         </form>
-        
-        
-        
+
+
+        <section id="Configs">
+            <button id="Config_Button" title="Config"></button>
+
+
+            <section id="Config_Background">
+                <h1>Temas</h1>
+                <section id="temas">
+                    
+                </section>
+                
+
+
+
+            </section>
+
+
+        </section>
+
         </main>
+
+
     
     
 
@@ -42,6 +62,17 @@ document.getElementById("Start").addEventListener('click',(e)=>{
     
     
     })
+
+document.getElementById("Config_Button").addEventListener('click',(e)=>{
+    const Config_Background = document.getElementById("Config_Background")
+    if (Config_Background.style.visibility == 'visible'){
+        Config_Background.style.visibility = "hidden"
+    }else
+    {
+        Config_Background.style.visibility = 'visible'
+    }
+
+})
 </script>
 </body>
 </html>
