@@ -3,6 +3,7 @@ app.on('ready',()=>{
     const Windows = new BrowserWindow({
         darkTheme:true,
         icon:"./Icon.png",
+        title:"MTC | Minecraft Tick Converter"
     })
     Windows.loadFile(`${__dirname}/index.html`)
 
