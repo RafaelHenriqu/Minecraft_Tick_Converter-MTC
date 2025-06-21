@@ -37,8 +37,6 @@
                 <h1>Theme</h1>
                 <section id="temas">
                 </section>
-                <h1>Custom Theme</h1>
-                <button id="Theme_Select">Select theme</button>
             </section>
             
 
@@ -71,24 +69,7 @@ document.getElementById("Config_Button").addEventListener('click',(e)=>{
     }
 
 })
-
-document.getElementById("Theme_Select").addEventListener('click', (e) => {
-    document.getElementById("Image").click();
-});
-
-document.getElementById("Image").addEventListener("change", (e) => {
-    const file = e.target.files[0];
-    if (file) {
-        const objectURL = URL.createObjectURL(file);
-
-        localStorage.Tema = objectURL;
-
-        document.querySelector("main").style.backgroundImage = `url(${localStorage.Tema})`;
-    } else {
-        alert("No file selected.");
-    }
-});
-
+ 
 
 
 </script>
